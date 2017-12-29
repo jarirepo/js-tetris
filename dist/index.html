@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tetris</title>
+  <style>
+    body {
+      display: grid;
+      grid-template-rows: 10vh 80vh 10vh;
+      grid-template-columns: 1fr;
+      margin: 0;
+      background-color: #202030;
+      color: #fff;
+      font-family: sans-serif;
+      font-size: 2em;
+      /*text-align: center;*/
+    }
+    header {
+      grid-row: 1 / 2;
+      background-color: #101020;
+    }
+    main {
+      display: grid;
+      grid-template-rows: 1fr 15fr;
+      grid-template-columns: 1fr;
+      /*grid-template-columns: repeat(2, 1fr);*/
+      grid-row: 2 / 3;
+      border: 10px solid #101020;
+      text-align: center;
+    }
+    #status {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      display: grid;
+      font-size: 1em;
+    }
+    #score {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      text-align: center;
+      border: 1px solid greenyellow;
+    }
+    #level {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+      text-align: center;
+      border: 1px solid greenyellow;
+    }
+    #game-container {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
+    }
+    #info {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+      font-size: 12pt;      
+    }
+    canvas {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      /*grid-row: 2 / 3;*/
+      /*border: 0.2em solid #fff;*/
+      border: 2px solid #f0f0c0;
+      height: 95%;
+    }
+    footer {
+      grid-row: 3 / 4;
+      text-align: center;
+      background-color: #101020;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+
+<body>
+  <header>JavaScript Tetris</header>
+  
+  <main>
+    <div id="status">
+      <div id="score"></div>
+      <div id="level"></div>
+    </div>
+    <div id="game-container">
+      <div id="info">
+          <h2 align="left">Game Controls:</h2>
+          <table border="0">
+            <tr><td>&leftarrow;</td><td>Move piece to the left</td></tr>
+            <tr><td>&rightarrow;</td><td>Move piece to the right</td></tr>
+            <tr><td>&downarrow;</td><td>Move piece down one step</td></tr>
+            <tr><td>[SPACE]</td><td>Fast drop</td></tr>
+            <tr><td>[ENTER]</td><td>Start gane</td></tr>
+            <tr><td>[F1]</td><td>Toggle preview</td></tr>
+            <tr><td>[P]</td><td>Toggle pause</td></tr>
+            <tr><td>[Q]</td><td>Rotate piece to the left</td></tr>
+            <tr><td>[W]</td><td>Rotate piece to the right</td></tr>
+          </table>        
+      </div>
+      <canvas id="tetris" width="240" height="400"></canvas>
+    </div>
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="bundle.js"></script>
+</body>
+</html>

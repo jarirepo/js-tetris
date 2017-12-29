@@ -1,0 +1,21 @@
+{
+  "name": "tetris",
+  "version": "0.0.1",
+  "description": "A Tetris game in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack && webpack-dev-server --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jari Repo",
+  "license": "ISC",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
